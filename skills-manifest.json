@@ -1,0 +1,66 @@
+{
+  "schema_version": "general-starter-skills/v1",
+  "version": "2026-10-21",
+  "edition": "Public starter adaptations",
+  "files": [
+    {
+      "path": "skills/manage-work/SKILL.md",
+      "bytes": 5650,
+      "sha256": "6c29d2411d6dd59b6cebaf5900926287b76a8c44da41cdc29e8b2fd014e83bca"
+    },
+    {
+      "path": "skills/reflect-and-refine/SKILL.md",
+      "bytes": 3247,
+      "sha256": "e3f5e82d2bc2faa5cf1514b7a8184b9beb0da8d05a6af8a925fdd28f45233474"
+    },
+    {
+      "path": "skills/reflect-and-refine/references/fix-layer-rubric.md",
+      "bytes": 732,
+      "sha256": "bc33d397b03e100e6fb18de1d2790f6637d4692578d67f2757f3c2ccee0b0bc8"
+    },
+    {
+      "path": "skills/thread-workflow/SKILL.md",
+      "bytes": 3451,
+      "sha256": "277aab28e015b162e5cfa55e5b7087a84089c544bcc65c925e0989c350b15185"
+    }
+  ],
+  "dependencies": {
+    "manage-work": {
+      "local_files": [
+        "SKILL.md"
+      ],
+      "runtime": "An agent or workflow tool that can read the instructions and the user-selected work material",
+      "optional_capabilities": [
+        "Bounded workers when available; otherwise execute sequentially"
+      ],
+      "network": "No network, connector, template, runtime API or external package required by this skill"
+    },
+    "thread-workflow": {
+      "local_files": [
+        "SKILL.md"
+      ],
+      "runtime": "An agent or workflow tool that can read the instructions and the user-selected work material",
+      "optional_capabilities": [
+        "A documented interactive checklist surface; otherwise use Markdown"
+      ],
+      "network": "No network, connector, template, runtime API or external package required by this skill"
+    },
+    "reflect-and-refine": {
+      "local_files": [
+        "SKILL.md",
+        "references/fix-layer-rubric.md"
+      ],
+      "runtime": "An agent or workflow tool that can read the instructions and the user-selected work material",
+      "optional_capabilities": [],
+      "network": "No network, connector, template, runtime API or external package required by this skill"
+    }
+  },
+  "adaptations": {
+    "manage-work": "Preserves the core execution workflow with general goal/status wording",
+    "thread-workflow": "Text-only checklist workflow with optional supported interaction and a Markdown fallback",
+    "reflect-and-refine": "General evidence review and maintenance workflow with one short fix-selection reference"
+  },
+  "attribution": {
+    "manage-work_inspiration": "https://x.com/mattshumer_/status/2095723177389232540"
+  }
+}
